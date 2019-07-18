@@ -4,13 +4,14 @@ import React, {Component} from 'react'
 
 import {config} from './config/config';
 
+import Header from '../src/components/header';
+
 class App extends Component {
 
   constructor(props){
     super(props);
     this.state = {
-      users : [],
-      changeData : ""
+      navs : ["Home","Products","About","Login","Reg"]
     }
     // this.getUserData();
   }
@@ -88,41 +89,7 @@ class App extends Component {
   render() {
     return (
       <div id="container">
-        <header>
-          <div className="width">
-            <h1><a href="/">acceler</a></h1>
-            <nav>
-              <ul className="sf-menu dropdown">
-                <li className="selected"><a href="index.html">Home</a>
-                </li>
-                <li><a className="has_submenu" href="examples.html">Examples</a>
-                  <ul>
-                    <li><a href="noslides.html">Static Text Page</a>
-                    </li>
-                    <li><a href="page.html">Static Frontpage</a>
-                    </li>
-                    <li><a href="#">Another link</a>
-                    </li>
-                  </ul>
-                </li>
-                <li><a href="three-column.html">Three Column</a>
-                </li>
-                <li><a className="has_submenu" href="#">Products</a>
-                  <ul>
-                    <li><a href="#">Product One</a>
-                    </li>
-                    <li><a href="#">Product Two</a>
-                    </li>
-                    <li><a href="#">Product Three</a>
-                    </li>
-                  </ul>
-                </li>
-                <li><a href="#">Contact</a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-        </header>
+        <Header items={this.state.navs}></Header>
       </div>
       )
   }
