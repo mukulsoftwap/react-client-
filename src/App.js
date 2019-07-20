@@ -2,9 +2,7 @@ import './App.css'
 
 import React, {Component} from 'react'
 
-import {config} from './config/config';
-
-import Header from '../src/components/header';
+import Header from './components/Header/Header';
 
 class App extends Component {
 
